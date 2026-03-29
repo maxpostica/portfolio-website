@@ -1,0 +1,10 @@
+<!-- 
+    Lesson objective: To create a part of the project demo for a portfolio using a template.
+	- To revise  *
+	- To make the preparations  
+	- To develop and style the top bar
+	- To develop and style the side navigation
+	- To develop and style the header
+	- To draw the lesson’s conclusions
+	- To get homework
+-->
