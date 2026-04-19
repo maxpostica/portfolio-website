@@ -56,12 +56,34 @@ linear-gradient(272.09deg, #FF055F -2.21%, #0BB6FF 108.82%);
 
 }
 
+html{font-size: 16px;
+}
+
+h1{font-size: var(--title-size);
+}
+
+h2{font-size: var(--title-size);
+}
+
+h3{font-size: var(--sub-title-size);
+}
+
+p{font-size: var(--base-text-size);
+}
+
+.container{max-width: 1300px;
+    margin: auto;
+}
+
 .gray_card{background-color: var(--card-bg-color);
     border-radius: 20px;
 }
 
 .page_name{font-family: protoSans;
     font-size: 5rem;
+    position: absolute;
+    right: -80px;
+    top: 0;
 }
 
 .page_name_text{font-family: protoSans;
@@ -77,9 +99,10 @@ linear-gradient(272.09deg, #FF055F -2.21%, #0BB6FF 108.82%);
 .top_bar{position: fixed;
     width: 100%;
     z-index: 1000;
+    height: 102px;
 }
 
-.top_bar_container{
+.top_bar_container{height: 102px;
 }
 
 .top_bar_body{background-color: var(--bg-color);
@@ -309,4 +332,195 @@ linear-gradient(272.09deg, #FF055F -2.21%, #0BB6FF 108.82%);
     left: 120px;
 }
 
-/* Create the footer (it’s at the very bottom) */
+.about_us_container{display: grid;
+    grid-template-rows: repeat(6, 308px);
+    grid-template-columns: repeat(3, 420px);
+    grid-template-areas: 
+    "layout layout icons"
+    "layout layout icons"
+    "layout layout forms"
+    "pic1 pic1 circle"
+    "cycle cycle cycle"
+    "gradient phone phone";
+    gap: 20px;
+}
+
+.about_us{position: relative;
+    overflow: hidden;
+}
+
+.about_item {
+}
+
+.about_layout {grid-area: layout;
+    padding: 21px 25px 124px 25px;
+}
+
+.about_layout img{width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 25%);
+}
+
+.about_layout h2{margin-top: 36px;
+    margin-bottom: 15px;
+}
+
+.about_layout p{font-size: 2rem;
+}
+
+.about_icons {grid-area: icons;
+    padding: 52px 0 52px 75px;
+    text-align: right;
+}
+
+.about_icons img{width: 100%;
+    border-radius: 10px 0 0 10px;
+    box-shadow: -20px 20px 20px rgba(0, 0, 0, 7%);
+}
+
+.about_icons h3{margin-top: 80px;
+    margin-bottom: 23px;
+    padding-right: 23px;
+}
+
+.about_icons p{padding-right: 23px;
+    font-size: 1rem;
+}
+
+.about_forms {grid-area: forms;
+    padding: 37px 33px 38px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.about_forms h3{transform: rotate(90deg) translateY(-250%);
+    transform-origin: top left;
+}
+
+.about_forms img{width: 65%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 25%);
+    border-radius: 10px;
+}
+
+.about_pic1 {grid-area: pic1;
+    background: url(img/images/about-card4.png) center/cover no-repeat;
+    border-radius: 20px;
+}
+
+.about_circle {grid-area: circle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gradient_ring {grid-area: ring;
+    background: url(img/images/about-card5-gradient-ring.svg) center/cover no-repeat;
+    width: 246px;
+    height: 246px; 
+}
+
+.gradient_ring img{filter: drop-shadow(0 0 20px 0 rgba(0,0,0,0.25));
+}
+
+.about_white_circle{filter: drop-shadow(0 0 20px rgba(0,0,0,0.25));
+}
+
+.circle_container{width: 100%;
+    height: 100%;
+    animation: circle_spin 5s linear infinite;
+}
+
+@keyframes circle_spin{
+
+    0%{transform: rotate(0deg);
+    }
+
+
+    100%{transform: rotate(360deg);
+    }
+
+}
+
+.about_cycle {grid-area: cycle;
+    padding: 26px 43px 30px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: right;
+}
+
+.about_cycle p{width: 15%;
+}
+
+.about_cycle h3{flex-grow: 1;
+    margin-top: 47px;
+}
+
+.about_cycle img{width: 70%;
+    
+}
+
+.about_gradient {grid-area: gradient;
+    background: radial-gradient(72.69% 85.12% at 28.93% 96.58%, #ff542f 0%, rgba(255, 84, 47, 0) 100%), linear-gradient(317deg, #ff055f 0%, #0bb6ff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.about_gradient h3{color: var(--white-color);
+}
+
+.about_phone {grid-area: phone;
+    background: url(img/images/about-card8.png) center/cover no-repeat;
+    border-radius: 20px;
+}
+
+
+
+/* portfolio section ------------------------------------------------------*/
+
+
+
+.portfolio {margin-top: 200px;
+    position: relative;
+}
+
+.page_name {
+}
+
+.page_name_text {
+}
+
+.container {
+}
+
+.portfolio_container {
+}
+
+.portfolio_buttons {background-color: var(--font-site-color);
+    width: 100%;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+}
+
+.portfolio_button {height: 100%;
+    color: white;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.portfolio_slides {display: flex;
+    width: 1300px;
+}
+
+.portfolio_slides img{flex-basis: 150px;
+}
+
